@@ -10,14 +10,14 @@ const Index = () => {
       {/* Hero Section */}
       <section className="text-center space-y-4">
         <img src="/placeholder.svg" alt="placeholder" className="mx-auto object-cover w-full h-[400px]" />
-        <h1 className="text-4xl font-bold">Discover Our Exclusive Cologne</h1>
-        <p className="text-lg text-muted-foreground">Experience the essence of luxury and sophistication.</p>
+        <h1 className="text-4xl font-bold">Discover Crescendo's Exclusive Cologne</h1>
+        <p className="text-lg text-muted-foreground">Experience the essence of luxury and sophistication with Crescendo.</p>
         <Button onClick={() => navigate("/shop")}>Shop Now</Button>
       </section>
 
       {/* Featured Products Section */}
       <section className="space-y-4">
-        <h2 className="text-3xl font-bold text-center">Featured Products</h2>
+        <h2 className="text-3xl font-bold text-center">Crescendo's Featured Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[1, 2, 3].map((product) => (
             <Card key={product}>
@@ -38,8 +38,8 @@ const Index = () => {
 
       {/* About Section */}
       <section className="space-y-4 text-center">
-        <h2 className="text-3xl font-bold">About Us</h2>
-        <p className="text-lg text-muted-foreground">We are dedicated to bringing you the finest colognes crafted with passion and precision.</p>
+        <h2 className="text-3xl font-bold">About Crescendo</h2>
+        <p className="text-lg text-muted-foreground">Crescendo is dedicated to bringing you the finest colognes crafted with passion and precision.</p>
         <img src="/placeholder.svg" alt="placeholder" className="mx-auto object-cover w-full h-[200px]" />
       </section>
     </div>
