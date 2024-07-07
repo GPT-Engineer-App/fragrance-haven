@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import logo from "@/public/images/logo.png";
+import logo from "../../public/images/logo.png";
 import { CircleUser, Menu, Package2, ShoppingCart } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
@@ -18,6 +18,13 @@ const Layout = () => {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
+        <NavItem
+          to="/"
+          className="flex items-center gap-2 text-lg font-semibold md:text-base"
+        >
+          <img src={logo} alt="Crescendo Logo" className="h-8 w-auto" />
+          <span className="sr-only">Crescendo</span>
+        </NavItem>
         <DesktopNav />
         <MobileNav />
         <UserMenu />
@@ -32,13 +39,7 @@ const Layout = () => {
 
 const DesktopNav = () => (
   <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 text-lg font-medium md:text-sm">
-    <NavItem
-      to="/"
-      className="flex items-center gap-2 text-lg font-semibold md:text-base"
-    >
-      <img src={logo} alt="Crescendo Logo" className="h-8 w-auto" />
-      <span className="sr-only">Crescendo</span>
-    </NavItem>
+    
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.title}
