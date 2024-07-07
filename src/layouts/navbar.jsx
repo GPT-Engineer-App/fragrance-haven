@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import logo from "../../public/images/logo.png";
+import newLogo from "../../public/images/new-logo.png"; // Updated logo import
 import { CircleUser, Menu, Package2, ShoppingCart } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
@@ -22,7 +22,7 @@ const Layout = () => {
           to="/"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
-          <img src="/images/logo.png" alt="Crescendo Logo" className="h-8 w-auto" />
+          <img src={newLogo} alt="Crescendo Logo" className="h-8 w-auto" /> {/* Updated logo */}
           <span className="sr-only">Crescendo</span>
         </NavItem>
         <DesktopNav />
@@ -61,7 +61,7 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <img src={logo} alt="Crescendo Logo" className="h-8 w-auto" />
+          <img src={newLogo} alt="Crescendo Logo" className="h-8 w-auto" /> {/* Updated logo */}
           <span className="sr-only">Crescendo</span>
         </NavItem>
         {navItems.map((item) => (
