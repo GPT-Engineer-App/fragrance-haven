@@ -9,9 +9,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2, ShoppingCart } from "lucide-react";
+import { CircleUser, Menu, ShoppingCart } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
+import logo from "../../public/images/logo.png";
 
 const Layout = () => {
   return (
@@ -35,8 +36,8 @@ const DesktopNav = () => (
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
-      <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <img src={logo} alt="Crescendo Logo" className="h-6 w-6" />
+      <span className="sr-only">Crescendo</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -60,8 +61,8 @@ const MobileNav = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold"
         >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <img src={logo} alt="Crescendo Logo" className="h-6 w-6" />
+          <span className="sr-only">Crescendo</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
