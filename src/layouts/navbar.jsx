@@ -114,7 +114,7 @@ const Footer = () => (
       <a href="#" className="text-muted-foreground hover:text-foreground">Privacy Policy</a>
       <a href="#" className="text-muted-foreground hover:text-foreground">Terms of Service</a>
     </div>
-    <div className="text-muted-foreground">© 2023 Acme Inc. All rights reserved.</div>
+    <div className="text-muted-foreground">© 2023 Crescendo. All rights reserved.</div>
     <div className="flex justify-center space-x-4">
       <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
       <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
