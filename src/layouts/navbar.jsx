@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Package2, ShoppingCart } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -24,6 +24,7 @@ const Layout = () => {
       <main className="flex-grow overflow-auto">
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };
@@ -83,10 +84,8 @@ const UserMenu = () => (
     <DropdownMenuContent align="end">
       <DropdownMenuLabel>My Account</DropdownMenuLabel>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>Settings</DropdownMenuItem>
-      <DropdownMenuItem>Support</DropdownMenuItem>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>Logout</DropdownMenuItem>
+      <DropdownMenuItem>Login/Register</DropdownMenuItem>
+      <DropdownMenuItem>Cart</DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 );
@@ -106,6 +105,21 @@ const NavItem = ({ to, children, className }) => (
   >
     {children}
   </NavLink>
+);
+
+const Footer = () => (
+  <footer className="border-t bg-background p-4 text-center space-y-4">
+    <div className="flex justify-center space-x-4">
+      <a href="#" className="text-muted-foreground hover:text-foreground">Privacy Policy</a>
+      <a href="#" className="text-muted-foreground hover:text-foreground">Terms of Service</a>
+    </div>
+    <div className="text-muted-foreground">© 2023 Acme Inc. All rights reserved.</div>
+    <div className="flex justify-center space-x-4">
+      <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+      <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+      <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+    </div>
+  </footer>
 );
 
 export default Layout;
