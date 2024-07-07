@@ -22,7 +22,7 @@ const Layout = () => {
           to="/"
           className="flex items-center gap-2 text-lg font-semibold md:text-base"
         >
-          <img src={logo} alt="Crescendo Logo" className="h-8 w-auto" />
+          <img src="/images/logo.png" alt="Crescendo Logo" className="h-8 w-auto" />
           <span className="sr-only">Crescendo</span>
         </NavItem>
         <DesktopNav />
@@ -39,7 +39,6 @@ const Layout = () => {
 
 const DesktopNav = () => (
   <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 text-lg font-medium md:text-sm">
-    
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.title}
